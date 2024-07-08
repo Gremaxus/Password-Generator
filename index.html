@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <section class="center">
+        <h2>Random Password Generator</h2>
+        <p>This password generator includes a maximum length of 256 characters, if you'd like to simulate a sort of '256 bit encryption generation'. Take that with a grain of salt.</p>
+        <p>(This may cause the webpage to warp, I'm too retarded right now to make it not do that so I'm sorry, eat my shorts.)</p>
+
+        <form class="center">
+            <div class="main-container">
+                <div class="length-container">
+                    <label for="length" id="pass-length" class="pass-text"><strong>Password Length:</strong></label>
+                    <input type="number" id="pwd-length" class="pass-length" min="6" max="256" value="6" placeholder="At least 6 characters" required />
+                </div>
+    
+                <div class="checkbox-container">
+                    <input type="checkbox" class="checkbox" id="uppercase" checked required />
+                    <label for="uppercase">Uppercase Characters</label>
+    
+                    <br />
+    
+                    <input type="checkbox" class="checkbox" id="lowercase" required />
+                    <label for="lowercase">Lowercase Characters</label>
+    
+                    <br />
+    
+                    <input type="checkbox" class="checkbox" id="numbers" required />
+                    <label for="numbers">Numbers (0-9)</label>
+    
+                    <br />
+    
+                    <input type="checkbox" class="checkbox" id="special" required />
+                    <label for="special">Special Characters</label>
+    
+                    <br />
+    
+                    <button type="button" class="button" onclick="passwordGenerator()">Generate Password</button>
+                    <button type="button" class="button" onclick="savePassword()">Save Password</button>
+                    <div id="password">
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+<script src="scripts.js"></script>
+</html>
